@@ -1,0 +1,285 @@
+<html>
+<head>
+<title>Twitch API</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<style>
+@import url('https://fonts.googleapis.com/css?family=Anton');
+
+a {
+  color: white;
+}
+
+#frame {
+  background: #65449B;
+  width: 70%;
+  margin: 50px 15%;
+  min-height: 300px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  border: 2px solid black;
+}
+
+.navbar {
+  background: white;
+  color: black;
+  float: right;
+  width: 32%;
+  text-align: center;
+  border: 3px solid #65449B;
+  margin-bottom: 7px;
+  font-family: anton;
+  cursor: pointer;
+}
+
+.channel {
+  background: black;
+  width: 100%;
+  margin: 5px 0px 5px 0px;
+  clear: both;
+}
+
+.logodiv {
+  height: 70px;
+  width: 70px;
+  margin-left: 10px;
+  padding: 4px;
+  float: left;
+}
+
+.logoimg {
+  height: 100%;
+}
+
+.channelName {
+  text-align: center;
+  color: white;
+  font-family: anton;
+}
+
+.description {
+  text-align: center;
+  color: white;
+}
+
+.offline-text {
+  color: #D3D3D3;
+  font-style: italic;
+}
+
+.online {
+}
+
+.offline {
+  display: none;
+}
+
+.closed {
+  display: none;
+}
+
+#plug {
+	padding-left: 3%;
+}
+
+</style>
+</head>
+<body>
+<div id="frame">
+  <div id="all" class="navbar" style="margin-right: 2%">
+    All
+  </div>
+  <div id="offline" class="navbar">
+    Offline
+  </div>
+  <div id="online" class="navbar">
+    Online
+  </div>
+  <div id="sc2" class="channel">
+    <div class="row">
+      <div class="logodiv">
+        <img class="logoimg" src="https://static-cdn.jtvnw.net/jtv_user_pictures/esl_sc2-profile_image-d6db9488cec97125-300x300.jpeg" alt="" ;>
+      </div>
+      <div class="channelName col-lg-2 col-md-1 col-sm-9 col-xs-9">
+        </br>
+        <a href="https://www.twitch.tv/esl_sc2" target="_blank">
+    ESL_SC2
+    </a>
+      </div>
+      <div id="sc2desc" class="description col-lg-8 col-md-8 col-sm-12 col-xs-12">
+      </div>
+    </div>
+  </div>
+  <div id="fcc" class="channel">
+    <div class="row">
+      <div class="logodiv">
+        <img class="logoimg" src="https://static-cdn.jtvnw.net/jtv_user_pictures/freecodecamp-profile_image-d9514f2df0962329-300x300.png" alt="" ;>
+      </div>
+      <div class="channelName col-lg-2 col-md-2 col-sm-10 col-xs-10">
+        </br>
+        <a href="https://www.twitch.tv/freecodecamp" target="_blank">
+    freecodecamp
+    </a>
+      </div>
+      <div id="fccdesc" class="description col-lg-8 col-md-8 col-sm-12 col-xs-12">
+      </div>
+    </div>
+  </div>
+  <div id="cotr" class="channel">
+    <div class="row">
+      <div class="logodiv">
+        <img class="logoimg" src="https://static-cdn.jtvnw.net/jtv_user_pictures/cotrpodcast-profile_image-fa00b30da4eeac47-300x300.jpeg" alt="" ;>
+      </div>
+      <div class="channelName col-lg-2 col-md-2 col-sm-10 col-xs-10">
+        </br>
+        <a href="https://www.twitch.tv/cotrpodcast" target="_blank">
+    COTR
+    </a>
+      </div>
+      <div id="cotrdesc" class="description col-lg-8 col-md-8 col-sm-12 col-xs-12">
+      </div>
+    </div>
+  </div>
+  <div id="mathphan" class="channel">
+    <div class="row">
+      <div class="logodiv">
+        <img class="logoimg" src="https://static-cdn.jtvnw.net/jtv_user_pictures/xarth/404_user_70x70.png" alt="" ;>
+      </div>
+      <div class="channelName col-lg-2 col-md-2 col-sm-10 col-xs-10">
+        </br>
+        <a href="https://www.twitch.tv/mathphan" target="_blank">
+    mathphan
+    </a>
+      </div>
+      <div id="mathphandesc" class="description col-lg-8 col-md-8 col-sm-12 col-xs-12">
+      </div>
+    </div>
+  </div>
+  <div id="brunofin" class="channel">
+    <div class="row">
+      <div class="logodiv">
+        <img class="logoimg" src="http://www.drodd.com/images14/x32.jpg" alt="" ;>
+      </div>
+      <div class="channelName col-lg-2 col-md-2 col-sm-10 col-xs-10">
+        </br>
+        <a href="https://www.twitch.tv/brunofin" target="_blank">
+    Brunofin
+    </a>
+      </div>
+      <div id="brunofindesc" class="description col-lg-8 col-md-8 col-sm-12 col-xs-12">
+      </div>
+    </div>
+  </div>
+	<div id="plug">coded by <a href="#">Stephen Nierste</a></div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script>
+$.getJSON("https://wind-bow.gomix.me/twitch-api/streams/ESL_SC2?callback=?", function(data) {
+  if (data.stream == null) {
+
+    $.getJSON("https://wind-bow.gomix.me/twitch-api/channel/ESL_SC2?callback=?", function(data) {
+      if (data[0] == "error") {
+        $("#sc2").addClass("closed");
+        $("#sc2desc").html("This account has been closed.").addClass("offline-text");
+      } else {
+        $("#sc2").addClass("offline");
+      }
+    });
+
+  } else {
+    $("#sc2").addClass("online");
+    $("#sc2desc").html(data.stream.game);
+  }
+});
+
+$.getJSON("https://wind-bow.gomix.me/twitch-api/streams/freecodecamp?callback=?", function(data) {
+  if (data.stream == null) {
+
+    $.getJSON("https://wind-bow.gomix.me/twitch-api/channel/freecodecamp?callback=?", function(data) {
+      if (data[0] == "error") {
+        $("#fcc").addClass("closed");
+        $("#fccdesc").html("This account has been closed.").addClass("offline-text");
+      } else {
+        $("#fcc").addClass("offline");
+      }
+    });
+
+  } else {
+    $("#fcc").addClass("online");
+    $("#fccdesc").html(data.stream.game);
+  }
+});
+
+$.getJSON("https://wind-bow.gomix.me/twitch-api/streams/cotrpodcast?callback=?", function(data) {
+  if (data.stream == null) {
+
+    $.getJSON("https://wind-bow.gomix.me/twitch-api/channel/cotrpodcast?callback=?", function(data) {
+      if (data[0] == "error") {
+        $("#cotr").addClass("closed");
+        $("#cotrdesc").html("This account has been closed.").addClass("offline-text");
+      } else {
+        $("#cotr").addClass("offline");
+      }
+    });
+
+  } else {
+    $("#cotr").addClass("online");
+    $("#cotrdesc").html(data.stream.game);
+  }
+});
+
+$.getJSON("https://wind-bow.gomix.me/twitch-api/streams/mathphan?callback=?", function(data) {
+  if (data.stream == null) {
+
+    $.getJSON("https://wind-bow.gomix.me/twitch-api/channel/mathphan?callback=?", function(data) {
+      if (data[0] == "error") {
+        $("#mathphan").addClass("closed");
+        $("#mathphandesc").html("This account has been closed.").addClass("offline-text");
+      } else {
+        $("#mathphan").addClass("offline");
+      }
+    });
+
+  } else {
+    $("#mathphan").addClass("online");
+    $("#mathphandesc").html(data.stream.game);
+  }
+});
+
+$.getJSON("https://wind-bow.gomix.me/twitch-api/streams/brunofin?callback=?", function(data) {
+  if (data.stream == null) {
+
+    $.getJSON("https://wind-bow.gomix.me/twitch-api/channel/brunofin?callback=?", function(data) {
+      if (data.error == "forbidden") {
+        $("#brunofin").addClass("closed");
+        $("#brunofindesc").html("This account has been closed.").addClass("offline-text");
+      } else {
+        $("#brunofin").addClass("offline");
+      }
+    });
+
+  } else {
+    $("#brunofin").addClass("online");
+    $("#brunofindesc").html(data.stream.game);
+  }
+});
+
+$("#online").on("click", function() {
+  $(".online").css("display", "block");
+  $(".offline").css("display", "none");
+  $(".closed").css("display", "none");
+});
+
+$("#offline").on("click", function() {
+  $(".online").css("display", "none");
+  $(".offline").css("display", "block");
+  $(".closed").css("display", "none");
+});
+
+$("#all").on("click", function() {
+  $(".online").css("display", "block");
+  $(".offline").css("display", "block");
+  $(".closed").css("display", "block");
+});
+</script>
+</html>

@@ -1,0 +1,19 @@
+{
+  "name": "twitch-api",
+  "version": "1.0.0",
+  "description": "This app shows the online/offline status of certain twitch feeds and previews of what is showing",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stavo343/twitch-api.git"
+  },
+  "author": "stavo343",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/stavo343/twitch-api/issues"
+  },
+  "homepage": "https://github.com/stavo343/twitch-api#readme"
+}
